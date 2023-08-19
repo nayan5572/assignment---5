@@ -198,21 +198,37 @@
                 <p class="font-medium text-2xl mb-4">Have coupon?</p>
                 <div class="form-control">
                     <div class="input-group">
-                        <input type="text" placeholder="Coupon code" class="input input-bordered" />
-                        <button id="coupon-id" class="btn py-4 px-5 bg-[#E527B2] text-white">Apply</button>
+                        <input id="couponCode" type="text" placeholder="Coupon code" class="input input-bordered" />
+                        <button id="couponId" class="btn py-4 px-5 bg-gray-400 text-white" disabled>Apply</button>
                     </div>
                 </div>
                 <div id="selectedName-entry" class="mt-10">
-                    
+
                 </div>
                 <div class="total-balance">
                     <h2 class="text-2xl font-medium">Total Price: <span id="totalPrice">00</span></h2>
                     <h2 class="text-2xl font-medium">Discount: <span id="totalDiscount">00</span></h2>
                     <h2 class="text-2xl font-medium">Total: <span id="totalDiscountPrice">00</span></h2>
-                    <button id="totalPriceButton" class="py-4 px-[72px] bg-[#E527B2] text-[20px] font-semibold text-white mt-6 rounded-lg ">Make Purchase</button>
+                    <button id="totalPriceButton"
+                        class="py-4 px-[72px] bg-gray-400 text-[20px] font-semibold text-white mt-6 rounded-lg" onclick="my_modal_2.showModal()"
+                        disabled>Make Purchase</button>
                 </div>
             </div>
         </aside>
+
+        <!-- click open modal -->
+        <!-- Open the modal using ID.showModal() method -->
+        <dialog id="my_modal_2" class="modal text-center">
+            <form method="dialog" class="modal-box">
+                <img class="mx-auto pt-24 pb-10" src="images/congo.png" alt="">
+                <h3 class="font-bold text-lg">Congratulations</h3>
+                <p class="py-4">Your Purchase the product</p>
+                <button class="py-4 px-11 bg-[#E527B2] text-white rounded-lg font-semibold"><a href="index.html">Go Home</a></button>
+            </form>
+            <form method="dialog" class="modal-backdrop">
+                <button>close</button>
+            </form>
+        </dialog>
     </main>
     <footer>
 
