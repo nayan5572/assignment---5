@@ -2,10 +2,9 @@
 let total = 0;
 
 function productName(target) {
-    // const itemsName = target.parentNode.childNodes[1].value;
     const h2Element = target.querySelector('h2').innerText;
 
-    // for selected card
+    // for selected main card
     const selectedName = document.getElementById('selectedName-entry');
 
     const count = selectedName.childElementCount;
@@ -13,7 +12,7 @@ function productName(target) {
     p.classList.add('py-2');
     p.innerText = `${count + 1}. ${h2Element}`;
 
-    // for selected
+    // for send selected
     selectedName.appendChild(p);
 
 
@@ -81,8 +80,6 @@ function calculateTotalAndDiscount() {
 
 applyButton.addEventListener('click', function () {
     // Display the discount and total
-    let message = `${discount.toFixed(2)} ${totalPriceElement}`;
-
     totalPriceElement.innerText = (total - discount).toFixed(2);
     discountPriceElement.innerText = discount.toFixed(2);
     
