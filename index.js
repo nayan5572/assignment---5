@@ -69,15 +69,11 @@ function calculateTotalAndDiscount() {
     if (couponCode === 'SELL200' && total >= 200) {
         discount = total * 0.2;
     } else {
-        discount = 0;
-        discountPriceElement.innerText = '00.00';
+        applyButton.addEventListener('click', function (){
+            // Display the discount and total
+            totalPriceElement.innerText = (total - discount).toFixed(2);
+            discountPriceElement.innerText = (discount = total * 0.2).toFixed(2);
+        });
     }
 }
-
-applyButton.addEventListener('click', function () {
-    // Display the discount and total
-    totalPriceElement.innerText = (total - discount).toFixed(2);
-    discountPriceElement.innerText = discount.toFixed(2);
-    
-});
 
