@@ -1,7 +1,5 @@
 // this code is for total Price calculation
 let total = 0;
-// const totalPriceButton = document.getElementById('totalPriceButton');
-
 
 function productName(target) {
     // const itemsName = target.parentNode.childNodes[1].value;
@@ -36,18 +34,6 @@ function productName(target) {
         totalPriceButton.classList.add('bg-gray-400');
     }
 
-
-    // condition for special coupon
-    // document.getElementById('couponId').addEventListener('click', function(){
-    //     const specialCouponField = document.getElementById('couponCode');
-    //     const specialField = specialCouponField.value;
-    //     if(specialField === 'SELL20' && total >= 200){
-    //         console.log('USA');
-    //     }
-    //     else{
-    //         console.log('BAN');
-    //     }
-    // });
     toggleApplyButtonState();
     calculateTotalAndDiscount();
 }
@@ -56,9 +42,9 @@ function productName(target) {
 var couponCodeField = document.getElementById('couponCode');
 var applyButton = document.getElementById('couponId');
 
-function toggleApplyButtonState(){
+function toggleApplyButtonState() {
     const couponCode = couponCodeField.value;
-    if(couponCode === 'SELL20' && total >= 200){
+    if (couponCode === 'SELL200' && total >= 200) {
         applyButton.removeAttribute('disabled');
         applyButton.classList.remove('bg-gray-400');
         applyButton.classList.add('bg-[#E527B2]');
@@ -68,7 +54,7 @@ function toggleApplyButtonState(){
         const discountAmount = discountPercentage / 100 * total;
         const finalPrice = total - discountAmount;
         console.log(finalPrice);
-    }else{
+    } else {
         applyButton.setAttribute('disabled', 'disabled');
         applyButton.classList.remove('bg-[#E527B2]');
         applyButton.classList.add('bg-gray-400');
@@ -81,17 +67,24 @@ let discount = 0;
 const totalPriceElement = document.getElementById('totalDiscountPrice');
 const discountPriceElement = document.getElementById('totalDiscount');
 
-function calculateTotalAndDiscount(){
+function calculateTotalAndDiscount() {
     const couponCode = couponCodeField.value;
-    if(couponCode === 'SELL20' && total >= 200){
+    if (couponCode === 'SELL200' && total >= 200) {
         discount = total * 0.2;
-        discountPriceElement.innerText = discount.toFixed(2);
-    }else{
+        // discountPriceElement.innerText = discount.toFixed(2);
+    } else {
         discount = 0;
         discountPriceElement.innerText = '00.00';
-        totalPriceElement.innerText = '00.00';
     }
-    totalPriceElement.innerText = (total - discount).toFixed(2);
-    discountPriceElement.innerText = totalPriceElement.toFixed(2);
+    // totalPriceElement.innerText = (total - discount).toFixed(2);
 }
+
+applyButton.addEventListener('click', function () {
+    // Display the discount and total
+    let message = `${discount.toFixed(2)} ${totalPriceElement}`;
+
+    totalPriceElement.innerText = (total - discount).toFixed(2);
+    discountPriceElement.innerText = discount.toFixed(2);
+    
+});
 
