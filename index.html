@@ -16,11 +16,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .workSans {
-            font-family: 'Abril Fatface', cursive;
-            font-family: 'Bebas Neue', sans-serif;
-            font-family: 'EB Garamond', serif;
-            font-family: 'Lato', sans-serif;
-            font-family: 'Manrope', sans-serif;
             font-family: 'Work Sans', sans-serif;
         }
     </style>
@@ -45,12 +40,13 @@
     </header>
     <main class="bg-[#F8F8F8]">
         <div class="pt-28 flex flex-col lg:flex-row container mx-auto">
-            <section class="">
+            <!-- flex flex-col lg:flex-row  -->
+            <section class="ml-[90px]">
                 <article class="container mx-auto">
                     <h1 class="text-4xl font-semibold mb-8">Kitchenware</h1>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mr-6">
                         <!-- grid part card 1 -->
-                        <div onclick="productName(this)" class="card w-96 bg-base-100 shadow-xl p-5">
+                        <div onclick="productName(this)" class="card bg-base-100 shadow-xl p-5">
                             <figure class="px-10 pt-10 bg-[#1111110D]">
                                 <img src="images/prod1.png" alt="Shoes" class="rounded-xl py-8" />
                             </figure>
@@ -68,7 +64,7 @@
                             </div>
                         </div>
                         <!-- grid part card 2 -->
-                        <div onclick="productName(this)" class="card w-96 bg-base-100 shadow-xl p-5">
+                        <div onclick="productName(this)" class="card bg-base-100 shadow-xl p-5">
                             <figure class="px-10 pt-10 bg-[#1111110D]">
                                 <img src="images/prod2.png" alt="Shoes" class="rounded-xl py-8" />
                             </figure>
@@ -86,7 +82,7 @@
                             </div>
                         </div>
                         <!-- grid part card 3 -->
-                        <div onclick="productName(this)" class="card w-96 bg-base-100 shadow-xl p-5">
+                        <div onclick="productName(this)" class="card bg-base-100 shadow-xl p-5">
                             <figure class="px-10 pt-10 bg-[#1111110D]">
                                 <img src="images/prod3.png" alt="Shoes" class="rounded-xl py-8" />
                             </figure>
@@ -107,7 +103,7 @@
                 <article class="container mx-auto mt-14 mb-8">
                     <h1 class="text-4xl font-semibold mb-8">Sportswear</h1>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mr-6">
-                        <div onclick="productName(this)" class="card w-96 bg-base-100 shadow-xl p-5">
+                        <div onclick="productName(this)" class="card bg-base-100 shadow-xl p-5">
                             <figure class="px-10 pt-10 bg-[#1111110D]">
                                 <img src="images/prod4.png" alt="Shoes" class="rounded-xl py-8" />
                             </figure>
@@ -125,7 +121,7 @@
                             </div>
                         </div>
                         <!-- grid part card 5 -->
-                        <div onclick="productName(this)" class="card w-96 bg-base-100 shadow-xl p-5">
+                        <div onclick="productName(this)" class="card bg-base-100 shadow-xl p-5">
                             <figure class="px-10 pt-10 bg-[#1111110D]">
                                 <img src="images/prod5.png" alt="Shoes" class="rounded-xl py-8" />
                             </figure>
@@ -143,7 +139,7 @@
                             </div>
                         </div>
                         <!-- grid part card 6 -->
-                        <div onclick="productName(this)" class="card w-96 bg-base-100 shadow-xl p-5">
+                        <div onclick="productName(this)" class="card bg-base-100 shadow-xl p-5">
                             <figure class="px-10 pt-10 bg-[#1111110D]">
                                 <img src="images/prod6.png" alt="Shoes" class="rounded-xl py-8" />
                             </figure>
@@ -166,7 +162,7 @@
                     <h1 class="text-4xl font-semibold mb-8">Furniture</h1>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mr-6">
                         <!-- grid part card 7 -->
-                        <div onclick="productName(this)" class="card w-96 bg-base-100 shadow-xl p-5">
+                        <div onclick="productName(this)" class="card bg-base-100 shadow-xl p-5">
                             <figure class="px-10 pt-10 bg-[#1111110D]">
                                 <img src="images/prod7.png" alt="Shoes" class="rounded-xl py-8" />
                             </figure>
@@ -184,7 +180,7 @@
                             </div>
                         </div>
                         <!-- grid part card 8 -->
-                        <div onclick="productName(this)" class="card w-96 bg-base-100 shadow-xl p-5">
+                        <div onclick="productName(this)" class="card bg-base-100 shadow-xl p-5">
                             <figure class="px-10 pt-10 bg-[#1111110D]">
                                 <img src="images/prod8.png" alt="Shoes" class="rounded-xl py-8" />
                             </figure>
@@ -202,7 +198,7 @@
                             </div>
                         </div>
                         <!-- grid part card 9 -->
-                        <div onclick="productName(this)" class="card w-96 bg-base-100 shadow-xl p-5">
+                        <div onclick="productName(this)" class="card bg-base-100 shadow-xl p-5">
                             <figure class="px-10 pt-10 bg-[#1111110D]">
                                 <img src="images/prod9.png" alt="Shoes" class="rounded-xl py-8" />
                             </figure>
@@ -222,7 +218,7 @@
                     </div>
                 </article>
             </section>
-            <aside class="ml-8 w-[30px] mt-[72px]">
+            <aside class="w-[30px] mt-[72px]">
                 <div class="w-[342px]">
 
                     <div class="form-control bg-white p-6 rounded-lg">
